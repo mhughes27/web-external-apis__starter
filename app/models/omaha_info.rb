@@ -13,7 +13,7 @@ omaha_info = HTTParty.get("https://api.forecast.io/forecast/#{API_KEY}/41.2524,-
 
 @omaha_temp = omaha_info["currently"]["temperature"].to_i
 @omaha_summary = omaha_info["currently"]["summary"]
-@omaha_precipProbability = omaha_info["currently"]["omaha_precipProbability"]
+@omaha_precipProbability = omaha_info["currently"]["precipProbability"]
 @omaha_humidity = omaha_info["currently"]["humidity"]
 @omaha_wind = omaha_info["currently"]["windSpeed"]
 @omaha_precipIntensity = omaha_info["currently"]["precipIntensity"]
@@ -104,7 +104,9 @@ omaha_info = HTTParty.get("https://api.forecast.io/forecast/#{API_KEY}/41.2524,-
 puts "The current weather is #{omaha_info["currently"]["summary"]}."
 puts "Current temperature #{@omaha_temp}."
 puts "Current conditions, #{@omaha_summary}."
+
 puts "Current chance to precipitation #{@omaha_precipProbability}."
+puts @omaha_precipProbability.class
 puts "Current humidity #{@omaha_humidity}."
 puts "Current wind speed #{@omaha_wind}."
 puts "Current precipitation #{@omaha_precipIntensity}."

@@ -7,3 +7,4 @@ coverage/.resultset*
 .env
 public/uploads
 app/models/secret.rb
+tests/unit/testsecret.rb

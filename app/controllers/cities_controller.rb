@@ -6,6 +6,11 @@ MyApp.get "/example" do
   erb :"weather"
 end
 
-MyApp.get "/Omaha" do
-	erb :"Omaha"
+MyApp.get "/weather" do
+	city = params[:name]
+	weather_info = weatherData(params[:name])
+
+
+
+	erb :"/weather"
 end

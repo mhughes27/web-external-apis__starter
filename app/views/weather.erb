@@ -1,275 +1,285 @@
 <div class="city-detail">
   <section class="city-header">
-    <h2>San Jose</h2>
-    <h4>Mostly Cloudy</h4>
-    <h1>49˚</h1>
+    <h2><%= city %></h2>
+    <h4><%= summary(weather_info) %></h4>
+    <h1><%= current_temperature(weather_info) %>˚</h1>
   </section>
 
   <section class="today">
     <ul class="today-overview">
       <li>Saturday</li>
       <li></li>
-      <li>62˚</li>
-      <li>46˚</li>
+      <li><%= currentMaxTemp(weather_info) %>˚</li>
+      <li><%= currentMinTemp(weather_info) %>˚</li>
     </ul>
+
+    <% hourlyTimes(weather_info) %>
+    <% houlyTemps(weather_info)  %>
 
     <div class="today-hourly-list-container">
       <ul class="today-hourly-list" style="width: 1536px;">
         <li>
           <ul>
-            <li>Now</li>
+            <li><%= times[0] %></li>
             
-            <li>47˚</li>
+            <li><%= temps[0] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>9 AM</li>
+            <li><%= times[1] %></li>
             
-            <li>50˚</li>
+            <li><%= temps[1] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>10 AM</li>
+            <li><%= times[2] %></li>
             
-            <li>53˚</li>
+            <li><%= temps[2] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>11 AM</li>
+            <li><%= times[3] %></li>
             
-            <li>56˚</li>
+            <li><%= temps[3] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>12 PM</li>
+            <li><%= times[4] %></li>
             
-            <li>58˚</li>
+            <li><%= temps[4] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>1 PM</li>
+            <li><%= times[5] %></li>
             
-            <li>60˚</li>
+            <li><%= temps[5] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>2 PM</li>
+            <li><%= times[6] %></li>
             
-            <li>62˚</li>
+            <li><%= temps[6] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>3 PM</li>
+            <li><%= times[7] %></li>
             
-            <li>62˚</li>
+            <li><%= temps[7] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>4 PM</li>
+            <li><%= times[8] %></li>
             
-            <li>62˚</li>
+            <li><%= temps[8] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>5 PM</li>
+            <li><%= times[9] %></li>
             
-            <li>59˚</li>
+            <li><%= temps[9] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>6 PM</li>
+            <li><%= times[10] %></li>
             
-            <li>56˚</li>
+            <li><%= temps[10] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>7 PM</li>
+            <li><%= times[11] %></li>
             
-            <li>54˚</li>
+            <li><%= temps[11] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>8 PM</li>
+            <li><%= times[12] %></li>
             
-            <li>53˚</li>
+            <li><%= temps[12] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>9 PM</li>
+            <li><%= times[13] %></li>
             
-            <li>52˚</li>
+            <li><%= temps[13] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>10 PM</li>
+            <li><%= times[14] %></li>
             
-            <li>51˚</li>
+            <li><%= temps[14] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>11 PM</li>
+            <li><%= times[15] %></li>
             
-            <li>51˚</li>
+            <li><%= temps[15] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>12 AM</li>
+            <li><%= times[15] %></li>
             
-            <li>50˚</li>
+            <li><%= temps[15] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>1 AM</li>
+            <li><%= times[16] %></li>
             
-            <li>50˚</li>
+            <li><%= temps[16] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>2 AM</li>
+            <li><%= times[17] %></li>
             
-            <li>50˚</li>
+            <li><%= temps[17] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>3 AM</li>
+            <li><%= times[18] %></li>
             
-            <li>49˚</li>
+            <li><%= temps[18] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>4 AM</li>
+            <li><%= times[19] %></li>
             
-            <li>48˚</li>
+            <li><%= temps[19] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>5 AM</li>
+            <li><%= times[20] %></li>
             
-            <li>48˚</li>
+            <li><%= temps[20] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>6 AM</li>
+            <li><%= times[21] %></li>
             
-            <li>48˚</li>
+            <li><%= temps[21] %>˚</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li>7 AM</li>
+            <li><%= times[22] %></li>
             
-            <li>48˚</li>
+            <li><%= temps[22] %>˚</li>
           </ul>
         </li>
       </ul>
     </div>
+      <% end %>
+      <% end %>
   </section>
 
+<% futureDays(weather_info) %>
+<% futureHighs(weather_info) %>
+<% futureLows(weather_info) %>
   <section class="forecast">
     <ul class="forecast-list">
       <li>
         <ul>
-          <li>Saturday</li>
+          <li><%= days[0] %></li>
           
-          <li>62˚</li>
-          <li>46˚</li>
+          <li><%= highs[0] %>˚</li>
+          <li><%= lows[0] %>˚</li>
         </ul>
       </li>
       <li>
         <ul>
-          <li>Sunday</li>
+          <li><%= days[1] %></li>
           
-          <li>58˚</li>
-          <li>48˚</li>
+          <li><%= highs[1] %>˚</li>
+          <li><%= lows[1] %>˚</li>
         </ul>
       </li>
       <li>
         <ul>
-          <li>Monday</li>
+          <li><%= days[2] %></li>
           
-          <li>58˚</li>
-          <li>45˚</li>
+          <li><%= highs[2] %>˚</li>
+          <li><%= lows[2] %>˚</li>
         </ul>
       </li>
       <li>
         <ul>
-          <li>Tuesday</li>
+          <li><%= days[3] %></li>
           
-          <li>58˚</li>
-          <li>43˚</li>
+          <li><%= highs[3] %>˚</li>
+          <li><%= lows[3] %>˚</li>
         </ul>
       </li>
       <li>
         <ul>
-          <li>Wednesday</li>
+          <li><%= days[4] %></li>
           
-          <li>63˚</li>
-          <li>36˚</li>
+          <li><%= highs[4] %>˚</li>
+          <li><%= lows[4] %>˚</li>
         </ul>
       </li>
       <li>
         <ul>
-          <li>Thursday</li>
+          <li><%= days[5] %></li>
           
-          <li>36˚</li>
+          <li><%= highs[5] %>˚</li>
+          <li><%= lows[5] %>˚</li>
         </ul>
       </li>
       <li>
         <ul>
-          <li>Friday</li>
+          <li><%= days[6] %></li>
           
-          <li>63˚</li>
-          <li>38˚</li>
+          <li><%= highs[6] %>˚</li>
+          <li><%= lows[6] %>˚</li>
         </ul>
       </li>
       <li>
         <ul>
-          <li>Saturday</li>
+          <li><%= days[7] %></li>
           
-          <li>55˚</li>
-          <li>43˚</li>
+          <li><%= highs[7] %>˚</li>
+          <li><%= lows[7] %>˚</li>
         </ul>
       </li>
     </ul>
   </section>
-
+  <% end %>
+  <% end %>
+  <% end %>
   <section class="today-details">
-    <p class="today-summary">Today: Light rain on Saturday, with temperatures peaking at
-    64˚F on Thursday.</p>
+    <p class="today-summary">Today: <%= dailySummary(weather_info) %></p>
 
     <ul class="today-details-list">
       <li>
         <ul>
           <li>Sunrise:</li>
-          <li>7:23 AM</li>
+          <li><%= sunrise(weather_info %></li>
         </ul>
       </li>
       <li>
         <ul>
           <li>Sunset:</li>
-          <li>5:09 PM</li>
+          <li><%= sunset(weather_info %></li>
         </ul>
       </li>
       <li>
@@ -277,13 +287,13 @@
       <li>
         <ul>
           <li>Chance of Rain:</li>
-          <li>0%</li>
+          <li><%= recipProb(weather_info) %>%</li>
         </ul>
       </li>
       <li>
         <ul>
           <li>Humidity:</li>
-          <li>86%</li>
+          <li><%= humidity(weather_info) %>%</li>
         </ul>
       </li>
       <li>
@@ -291,13 +301,13 @@
       <li>
         <ul>
           <li>Wind:</li>
-          <li>1 mph NW</li>
+          <li><%= windSpeed(weather_info) %>mph NW</li>
         </ul>
       </li>
       <li>
         <ul>
           <li>Feels like:</li>
-          <li>49˚</li>
+          <li><%= feelsLike(weather_info) %>˚</li>
         </ul>
       </li>
       <li>
@@ -305,13 +315,13 @@
       <li>
         <ul>
           <li>Precipitation:</li>
-          <li>--</li>
+          <li><%= precipIntensity(weather_info) %></li>
         </ul>
       </li>
       <li>
         <ul>
           <li>Pressure:</li>
-          <li>30 in</li>
+          <li><%= pressure(weather_info) %> in</li>
         </ul>
       </li>
       <li>
@@ -319,7 +329,7 @@
       <li>
         <ul>
           <li>Visibility:</li>
-          <li>9.42 mi</li>
+          <li><%= visibility(weather_info) %> mi</li>
         </ul>
       </li>
     </ul>
