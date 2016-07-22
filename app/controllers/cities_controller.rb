@@ -7,10 +7,8 @@ MyApp.get "/example" do
 end
 
 MyApp.get "/weather" do
-	city = params[:name]
-	weather_info = weatherData(params[:name])
-
-
+	@city = params[:name]
+	@weather_info = weatherData(params[:location])
 
 	erb :"/weather"
 end
