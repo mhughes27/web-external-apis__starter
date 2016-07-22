@@ -40,7 +40,8 @@ end
 #
 # Returns the time of sunrise in unix as an integer
 def sunrise(weather_info)
-	weather_info["daily"]["data"][0]["sunriseTime"]
+	nonunix= Time.at(weather_info["daily"]["data"][0]["sunriseTime"]).to_datetime
+	nonunix.strftime("%-I:%M" "%p")
 end
 
 
@@ -50,7 +51,8 @@ end
 #
 # Returns the time of sunrise in unix as an integer
 def sunset(weather_info)
-	weather_info["daily"]["data"][0]["sunsetTime"]
+	nonunix = Time.at(weather_info["daily"]["data"][0]["sunsetTime"]).to_datetime
+	nonunix.strftime("%-I:%M" "%p")
 end
 
 
@@ -80,7 +82,8 @@ end
 #
 # Returns a fixnum when multiplied by 100 give the percent chance of precipitation
 def precipProb(weather_info)
-	weather_info["currently"]["precipProbability"]*100
+	prob = weather_info["currently"]["precipProbability"]*100	
+	prob.to_i
 end
 
 
@@ -120,7 +123,7 @@ end
 #
 # Returns a float I am unsure of the units
 def pressure(weather_info)
-	weather_info["currently"]["pressure"]
+	weather_info["currently"]["pressure"]*0.0295301
 end
 
 
@@ -164,10 +167,11 @@ end
 # def hourlyTemps(weather_info)
 # 	temps=[]
 # 	weather_info["hourly"]["data"].each do |hour|
-# 		temps = temps << hour["temperature"]
+# 		@temps = temps << hour["temperature"].to_i
 # 	end
-# 	return temps
+# 	return @temps
 # end
+# binding.pry
 
 
 # Displays the hourly times
@@ -193,13 +197,14 @@ end
 # Returns an array of times for the upcoming days
 
 ###convert to %A
-# def futureDays(weather_info)
-# 	days=[]
-# 	weather_info["daily"]["data"].each do |day|
-# 		days << day["time"]
-# 	end
-# 	return days
-# end
+def futureDays(weather_info)
+	days=[]
+	weather_info["daily"]["data"].each do |day|
+		days << day["time"]
+	end
+	puts days
+end
+
 
 
 # Displays expected high temperatures for the upcoming days

@@ -1,19 +1,19 @@
-require "httparty"
-require "pry"
+# require "httparty"
+# require "pry"
 
-require_relative "secret.rb"
-require "date"
-
-
-
-weather_info = HTTParty.get("https://api.forecast.io/forecast/#{API_KEY}/37.7749,-122.4149")
+# require_relative "secret.rb"
+# require "date"
 
 
-	# temps = []
-	# weather_info["hourly"]["data"].each do |hour|
-	# 	temps << hour["temperature"]
-	# end
-	# puts temps
+
+# weather_info = HTTParty.get("https://api.forecast.io/forecast/#{API_KEY}/37.7749,-122.4149")
+
+
+# 	temps = []
+# 	weather_info["hourly"]["data"].each do |hour|
+# 		temps << hour["temperature"].to_i
+# 	end
+# 	puts temps
 
 	# highs=[]
 	# weather_info["daily"]["data"].each do |day|
@@ -33,15 +33,22 @@ weather_info = HTTParty.get("https://api.forecast.io/forecast/#{API_KEY}/37.7749
 	# end
 	# puts hours
 
-	days = []
-		weather_info["daily"]["data"].each do |day|
-			days << day["time"]
-		end
-		puts days
+	# days = []
+	# 	weather_info["daily"]["data"].each do |day|
+	# 		days << day["time"]
+	# 	end
+	# 	puts days
 
-	daysss = [] 
-		days.each do |day| 
-		Time.at(day).to_datetime
-		end
-		puts daysss
+	# convert = []
+	# 	Time.at(days).to_datetime
+
+
+
+	# daysss = [] 
+	# 	days.each do |day| 
+	# 	Time.at(day).to_datetime
+	# 	end
+	# 	puts daysss
+	
+
 

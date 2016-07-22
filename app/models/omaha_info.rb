@@ -49,6 +49,13 @@
 # @omaha_day6time = Time.at(omaha_info["daily"]["data"][6]["time"]).to_datetime
 # @omaha_day7time = Time.at(omaha_info["daily"]["data"][7]["time"]).to_datetime
 
+# @omaha_sunrise = Time.at(omaha_info["daily"]["data"][0]["sunriseTime"]).to_datetime
+# @omaha_sunset = Time.at(omaha_info["daily"]["data"][0]["sunsetTime"]).to_datetime
+
+# puts @omaha_sunrise.strftime("%-I:%M" "%p")
+# puts @omaha_sunset.strftime("%-I:%M"  "%p")
+
+
 # @omaha_hour1temp = omaha_info["hourly"]["data"][1]["temperature"].to_i
 # @omaha_hour2temp = omaha_info["hourly"]["data"][2]["temperature"].to_i
 # @omaha_hour3temp = omaha_info["hourly"]["data"][3]["temperature"].to_i
